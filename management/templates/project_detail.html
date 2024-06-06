@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Detail</title>
+</head>
+<body>
+    <h1>{{ project.name }}</h1>
+    <p>Description: {{ project.description }}</p>
+    <p>Start date: {{ project.start_date }}</p>
+    <p>End date: {{ project.due_date }}</p>
+    <h2>Tasks:</h2>
+    <ul>
+        {% for task in project.tasks.all %}
+            <li>{{ project.task.title }} - {{ project.task.due_date }} by {{project.task.employee.first_name}} {{project.task.employee.last_name}}</li>
+        {% empty %}
+            <li>No tasks for this project</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Back to main page</a>
+</body>
+</html>
