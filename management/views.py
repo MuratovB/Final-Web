@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Project, Task, Employee
+from .forms import PorjectForm, TaskForm, EmployeeForm
 
 def index(request):
     projects = Project.objects.all()
