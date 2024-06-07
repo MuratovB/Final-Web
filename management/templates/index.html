@@ -12,6 +12,7 @@
             <li>No projects available</li>
         {% endfor %}
     </ul>
+    <a href="{% url 'create_project' %}">Create New Project</a> <!-- Добавление кнопки для создания нового проекта -->
 
     <h1>Employees</h1>
     <ul>
@@ -21,6 +22,7 @@
             <li>No employees available</li>
         {% endfor %}
     </ul>
+    <a href="{% url 'create_employee' %}">Create New Employee</a> <!-- Добавление кнопки для создания нового работника -->
 
     <h1>Tasks</h1>
     <ul>
@@ -30,5 +32,7 @@
             <li>No tasks available</li>
         {% endfor %}
     </ul>
+    <a href="{% url 'create_task' %}">Create New Task</a> <!-- Добавление кнопки для создания новой задачи -->
+
 </body>
 </html>
